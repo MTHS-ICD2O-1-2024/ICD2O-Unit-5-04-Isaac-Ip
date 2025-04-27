@@ -34,12 +34,10 @@
       </div>
       <!-- Numeric textfield for number-->
 <form action="#">
-  Age:
-  <div class="mdl-textfield mdl-js-textfield">
-    <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="age" step="1" />
-    <label class="mdl-textfield__label" for="age">Age Here ...</label>
-    <span class="mdl-textfield__error">Input is not a number!</span>
-  </div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+  <input class="mdl-textfield__input" type="number" id="age">
+  <label class="mdl-textfield__label" for="age" style="color: black;">Age</label>
+</div>
 <br>
       <!-- Dropdown box for date-->
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -53,15 +51,16 @@
       <option value="FRI">Friday</option>
       <option value="SAT">Saturday</option>
     </select>
-    <label class="mdl-textfield__label" for="day-of-week">Day of the Week</label>
+    <label class="mdl-textfield__label" for="day-of-week" style="color: black;">Day of the Week</label>
   </div>
 </form>
         <!-- Raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
           onclick="checkForDiscount()" type="button">
-          checkForDiscount
+          Check For Discount
         </button>
       </form>
+      <br>
       <br>
       <div id="result">
       </div>
