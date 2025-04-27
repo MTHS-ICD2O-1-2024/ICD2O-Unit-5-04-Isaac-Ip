@@ -17,13 +17,13 @@ function checkForDiscount() {
   if (isNaN(age) || !dayOfWeek) {
     resultMessage = "Please enter a valid age and select a day of the week.";
 
-  } else if ((age >= 12 && age <= 21) && (dayOfWeek === "TUE" || dayOfWeek === "THU")) {
+  } else if ((age >= 12 && age <= 21) && (dayOfWeek == "TUE" || dayOfWeek == "THU")) {
     resultMessage = "You are eligible for a student discount!";
 
-  } else if ((age >= 65) && (dayOfWeek === "TUE" || dayOfWeek === "THU")) {
+  } else if ((age >= 65) && (dayOfWeek == "TUE" || dayOfWeek == "THU")) {
     resultMessage = "You are eligible for an elderly discount!";
 
-  } else if (dayOfWeek === "SAT" || dayOfWeek === "SUN") {
+  } else if (dayOfWeek == "SAT" || dayOfWeek == "SUN") {
     resultMessage = "You are eligible for a weekend discount!";
 
   } else {
