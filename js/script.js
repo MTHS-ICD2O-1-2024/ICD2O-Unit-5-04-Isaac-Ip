@@ -11,7 +11,7 @@
  */
 function checkForDiscount() {
   const age = parseInt(document.getElementById("age").value);
-  const dayOfWeek = document.getElementById("day-of-week");
+  const dayOfWeek = document.getElementById("day-of-week").value;
   let resultMessage = "";
 
   if (isNaN(age) || !dayOfWeek) {
@@ -22,6 +22,9 @@ function checkForDiscount() {
 
   } else if ((age >= 65) && (dayOfWeek === "TUE" || dayOfWeek === "THU")) {
     resultMessage = "You are eligible for an elderly discount!";
+
+  } else if (dayOfWeek === "SAT" || dayOfWeek === "SUN") {
+    resultMessage = "You are eligible for a weekend discount!";
 
   } else {
     resultMessage = "Sorry, you are not eligible for a discount.";
