@@ -18,6 +18,12 @@
   color: rgb(255, 0, 0);
 }
 
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+  color: #000000;
+}
+
 .page-content {
   color: white;
   font-family: Helvetica, Arial, sans-serif;
