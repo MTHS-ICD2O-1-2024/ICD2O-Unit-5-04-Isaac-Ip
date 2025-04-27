@@ -1,9 +1,75 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Title</title>
-  </head>
-  <body>
-    <p>Paragraph</p>
-  </body>
+<!-- ICS2O-Unit-5-04-HTML-MDL -->
+<html lang="en-ca">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Museum Discount, in JS" />
+  <meta name="keywords" content="mths, icd2o" />
+  <meta name="author" content="Isaac Ip" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-indigo.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <title>Museum Discount, in JS</title>
+</head>
+
+<body>
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="./js/script.js"></script>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Museum Discount, in JS</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="right-image">
+        <img src="./images/movie_ratings.jpg" alt="movie ratings">
+        <h1>&nbsp Enter in your age:</h1>
+
+      </div>
+      <!-- Numeric textfield for number-->
+      <div></div>
+      <form action="#">
+        Age:
+        <div class="mdl-textfield mdl-js-textfield">
+          <input class="mdl-textfield__input" type="number" pattern="-?[0-9]*(\.[0-9]+)?" id="age" step="1" />
+          <label class="mdl-textfield__label" for="age">Age Here ...</label>
+          <span class="mdl-textfield__error">Input is not a number!</span>
+        </div>
+        <br>
+<!-- Select with floating label and arrow -->
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select">
+  <input type="text" value="" class="mdl-textfield__input" id="sample4" readonly>
+  <input type="hidden" value="" name="sample4">
+  <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+  <label for="sample4" class="mdl-textfield__label">Country</label>
+  <ul for="sample4" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+    <li class="mdl-menu__item" data-val="DEU">Germany</li>
+    <li class="mdl-menu__item" data-val="BLR">Belarus</li>
+    <li class="mdl-menu__item" data-val="RUS">Russia</li>
+  </ul>
+</div>
+        <br>
+        <br>
+        <!-- Raised button with ripple -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="findMovieType()" type="button">
+          Generate
+        </button>
+      </form>
+      <div id="result">
+      </div>
+      <div id="thank-you-message">
+      </div>
+      <br />
+    </main>
+  </div>
+</body>
+
 </html>
